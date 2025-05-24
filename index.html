@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lahjari Car</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+    .lang-switcher {
+      margin-left: auto;
+    }
+    .lang-switcher select {
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .hero {
+      background-color: #0074D9;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 36px;
+    }
+    .search-box {
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+      color: black;
+    }
+    .cars-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .cars-section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .car-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .car {
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .car img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about-section, .contact-section {
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+    .about-section h3, .contact-section h3 {
+      text-align: center;
+      font-size: 28px;
+    }
+    .contact-section form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-section input, .contact-section textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-section button {
+      padding: 10px;
+      background-color: #0074D9;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #001f3f;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lahjari Car</h1>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">السيارات</a>
+      <a href="#">الحجز</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+    <div class="lang-switcher">
+      <select onchange="changeLanguage(this.value)">
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>كراء السيارات</h2>
+    <p>ابحث عن سيارة بإيجار بكل سهولة</p>
+    <div class="search-box">
+      <form>
+        <input type="text" placeholder="الموقع">
+        <input type="date">
+        <input type="date">
+        <select>
+          <option>اختر سيارة</option>
+          <option>سيارة اقتصادية</option>
+          <option>سيارة متوسطة</option>
+          <option>سيارة دفع رباعي</option>
+        </select>
+        <button type="submit">ابحث</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="cars-section">
+    <h3>السيارات المتاحة</h3>
+    <div class="car-list">
+      <div class="car">
+        <img src="https://example.com/economy.jpg" alt="سيارة اقتصادية">
+        <p>سيارة اقتصادية</p>
+      </div>
+      <div class="car">
+        <img src="https://example.com/medium.jpg" alt="سيارة متوسطة">
+        <p>سيارة متوسطة</p>
+      </div>
+      <div class="car">
+        <img src="https://example.com/suv.jpg" alt="سيارة دفع رباعي">
+        <p>سيارة دفع رباعي</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <h3>من نحن</h3>
+    <p style="text-align: center;">Lahjari Car هي شركة مغربية مختصة في كراء السيارات تقدم خدمات بجودة عالية في جميع أنحاء المملكة، مع أسطول متنوع من السيارات الحديثة.</p>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h3>اتصل بنا</h3>
+    <form>
+      <input type="text" placeholder="الاسم الكامل">
+      <input type="email" placeholder="البريد الإلكتروني">
+      <textarea rows="4" placeholder="رسالتك"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; Lahjari Car 2025</p>
+    <p>الهاتف: 1234567890 | البريد: info@lahjaricar.com</p>
+  </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      alert("تغيير اللغة إلى: " + lang + " (وظيفة الترجمة تحتاج تطوير إضافي)");
+    }
+  </script>
+</body>
+</html>

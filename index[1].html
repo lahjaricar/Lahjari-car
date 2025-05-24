@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lahjari Car</title>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('ar')) {
+      window.location.href = 'ar/index.html';
+    } else if (lang.startsWith('fr')) {
+      window.location.href = 'fr/index.html';
+    } else {
+      window.location.href = 'en/index.html';
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting based on your language...</p>
+</body>
+</html>
